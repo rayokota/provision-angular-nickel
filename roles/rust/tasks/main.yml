@@ -1,0 +1,8 @@
+---
+# From http://blog.coolaj86.com/articles/installing-ruby-on-ubuntu-12-04.html
+- name: Install build-essential 
+  apt: pkg=build-essential
+
+- name: Install Rust 
+  shell: curl -sSf https://static.rust-lang.org/rustup.sh | sh
+

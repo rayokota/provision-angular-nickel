@@ -4,5 +4,5 @@
   apt: pkg=build-essential
 
 - name: Install Rust 
-  shell: curl -sSf https://static.rust-lang.org/rustup.sh | sh
+  shell: curl -sSf https://static.rust-lang.org/rustup.sh | sh -s -- --yes
 

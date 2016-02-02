@@ -1,9 +1,12 @@
 ---
+- name: Add PPA for Postgres 9.2
+  apt_repository: repo=ppa:pitti/postgresql
+
 - name: Install postgresql
-  apt: pkg=postgresql
+  apt: pkg=postgresql-9.2
 
 - name: Install postgresql-contrib
-  apt: pkg=postgresql-contrib
+  apt: pkg=postgresql-contrib-9.2
 
 - name: Install libpq-dev
   apt: pkg=libpq-dev
@@ -16,5 +19,5 @@
   sudo_user: postgres
 
 - name: Create database
-  postgresql_db: name=dynamo_db
+  postgresql_db: name=my_db
   sudo_user: postgres
